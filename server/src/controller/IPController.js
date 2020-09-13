@@ -1,5 +1,5 @@
 const net = require("net");
-const external_ip = require("external-ip");
+const extIP = require("external-ip");
 
 function checkTcp(host, port) {
     return new Promise((resolve) => {
@@ -23,12 +23,21 @@ function getExternalIp(host) {
         if (host) {
             resolve(host);
         } else {
-            external_ip()((err, ip) => {
+            let getIP = extIP({
+                replace: true,
+                services: ['https://ipinfo.io/ip', 'http://ifconfig.co/x-real-ip', 'http://ifconfig.io/ip'],
+                timeout: 600,
+                getIP: 'parallel',
+                userAgent: 'Chrome 15.0.874 / Mac OS X 10.8.1'
+            });
+
+            getIP((err, ip) => {
                 if (err) {
                     reject(err);
-                } else {
-                    resolve(ip);
                 }
+
+                resolve(ip);
+                console.log(ip);
             });
         }
     });
@@ -36,16 +45,16 @@ function getExternalIp(host) {
 
 module.exports = {
     async index(req, res) {
+        const ipReq = req.headers['x-forwarded-for']
         const ip = await getExternalIp();
 
         await res.status(200).json({
             ip: ip,
+            ipReq: ipReq
         });
     },
     async scan(req, res) {
         const {ip, port} = req.body;
-
-        console.log(req.body)
 
         if (ip) {
             await getExternalIp(ip);
