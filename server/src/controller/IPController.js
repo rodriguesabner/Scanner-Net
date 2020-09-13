@@ -1,8 +1,8 @@
-const net = require("net");
 const isPortReachable = require('is-port-reachable');
 
 async function checkTcp(host, port) {
-    const response = await isPortReachable(port, {host: `${host}`})
+    const response = await isPortReachable(port, {host: `${host}`, timeout: 5000})
+    console.log(response)
     return response
 }
 
