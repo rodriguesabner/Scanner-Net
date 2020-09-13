@@ -1,11 +1,5 @@
 import styled from 'styled-components'
 
-export const Layout = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`
-
 export const Container = styled.div`
   display: flex;
   max-width: 1040px;
@@ -15,15 +9,6 @@ export const Container = styled.div`
     padding: 30px 0;
   }
   
-`
-
-export const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  background: #302D41;
-  color: #fff;
-  height: 40px;
-  width: 100%;
 `
 
 export const LeftDiv = styled.div`
@@ -75,19 +60,6 @@ export const Image = styled.img`
         transform: translateY(-10px);
       }
     }
-`
-
-export const Title = styled.p`
-  font-weight: 600;
-  font-size: 28px;
-  
-  @media only screen and (max-width: 768px) {
-    font-size: 20px;
-  }
-`
-
-export const Description = styled.p`
-  color: #777;
 `
 
 export const Form = styled.div`
@@ -201,32 +173,4 @@ export const RepeaterPort = styled.div`
   .description{
     text-align: center;
   }
-`
-
-export const FixedImage = styled.img`
-  width: 500px;
-  height: 400px;
-  margin: 30px 0;
-  
-   //width: 100%;
-  position: sticky;
-  top: 150px;
-  
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-`
-
-
-export const FeatureItem = styled.div`
-  margin-left: 60px;
-  margin-bottom: 120px;
-  padding: 40px;
-  border-radius: 30px;
-  max-width: 500px;
-  
-    @media only screen and (max-width: 768px) {
-        margin-left: 0;
-        margin-top: -60px;
-    }
 `
