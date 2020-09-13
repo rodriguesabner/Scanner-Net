@@ -27,5 +27,17 @@
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
+<script>
+    /* In main.js */
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./serviceworker.js')
+            .then(function (registration) {
+                console.log("Service Worker Registered", registration);
+            })
+            .catch(function (err) {
+                console.log("Service Worker Failed to Register", err);
+            })
+    }
+</script>
 </body>
 </html>
