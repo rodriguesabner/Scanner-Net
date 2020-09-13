@@ -88,7 +88,6 @@ Reach out to me at one of the following places!
 ---
 
 ## Donations (Optional)
-
-<a href="https://www.patreon.com/bePatron?u=42288653" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+[![Support via Patreon](https://cloakandmeeple.files.wordpress.com/2017/06/become_a_patron_button3x.png?w=200)](https://www.patreon.com/bePatron?u=42288653)
 
 ---
