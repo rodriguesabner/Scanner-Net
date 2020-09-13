@@ -127,7 +127,7 @@ function App() {
 
             <div style={{display: `${visible}`, marginTop: -70}}>
                 {
-                    result === 'ECONNREFUSED' ? (
+                    result === false ? (
                         <Title style={{textAlign: 'center'}}>
                             A porta <b>{portaOld}</b> do servidor <b>{ipOld}</b> está:<br/>
                             <b style={{color: '#ff7777'}}>Inacessível</b>

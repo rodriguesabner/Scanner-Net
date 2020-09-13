@@ -1,20 +1,9 @@
 const net = require("net");
+const isPortReachable = require('is-port-reachable');
 
-function checkTcp(host, port) {
-    return new Promise((resolve) => {
-        const socket = net.createConnection(
-            {
-                port: port,
-                host: host,
-            },
-            () => {
-                resolve("OPEN");
-            }
-        );
-        socket.on("error", (error) => {
-            resolve(error.code);
-        });
-    });
+async function checkTcp(host, port) {
+    const response = await isPortReachable(port, {host: `${host}`})
+    return response
 }
 
 module.exports = {
@@ -29,7 +18,6 @@ module.exports = {
         const {ip, port} = req.body;
 
         if (ip) {
-            await getExternalIp(ip);
             const status = await checkTcp(ip, port);
 
             await res.status(200).json({
