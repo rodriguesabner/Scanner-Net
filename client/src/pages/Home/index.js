@@ -1,8 +1,8 @@
 import React from 'react'
 import HeaderMenu from "../../components/Header";
 import TestPort from "../../components/TestPort";
-import IPAtual from "../../components/IPAtual";
-import Curiosidades from "../../components/Curiosidades";
+import CurrentIp from "../../components/CurrentIp";
+import Tips from "../../components/Tips";
 import {Layout} from "../../styles/styles";
 
 function Home() {
@@ -10,8 +10,8 @@ function Home() {
         <Layout>
             <HeaderMenu/>
             <TestPort/>
-            <IPAtual/>
-            <Curiosidades/>
+            <CurrentIp/>
+            <Tips/>
         </Layout>
     )
 }

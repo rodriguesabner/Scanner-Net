@@ -59,11 +59,12 @@ function TestPort() {
             <Container>
                 <LeftDiv>
                     <Title>
-                        Defina um servidor (IP ou Domínio)<br/> e a porta que deseja verificar se está aberta.
+                        Define a server (IP or Domain)<br/>
+                        and the port you want to check if it is open.
                     </Title>
 
                     <Description role="img" aria-label="smile">
-                        É simples, basta digitar o IP e a Porta nos campos abaixo 🙂
+                        It's simple, just enter the IP and Port in the fields below 🙂
                     </Description>
 
                     <Form>
@@ -76,14 +77,14 @@ function TestPort() {
 
                         <div style={{display: 'flex', flexDirection: 'column'}}>
                             <label>
-                                Porta
+                                Port
                             </label>
 
-                            <Port placeholder="Porta" id="port" value={porta}
+                            <Port placeholder="Port" id="port" value={porta}
                                   onChange={(e) => setPorta(e.target.value)}/>
                         </div>
                         <Button type="button" onClick={() => checkPort()}>
-                            Testar
+                            Check
                         </Button>
                     </Form>
                 </LeftDiv>
@@ -103,13 +104,13 @@ function TestPort() {
                 {
                     result === false ? (
                         <Title style={{textAlign: 'center'}}>
-                            A porta <b>{portaOld}</b> do servidor <b>{ipOld}</b> está:<br/>
-                            <b style={{color: '#ff7777'}}>Inacessível</b>
+                            The port <b>{portaOld}</b> of the server <b>{ipOld}</b> is:<br/>
+                            <b style={{color: '#ff7777'}}>Unreachable</b>
                         </Title>
                     ) : (
                         <Title style={{textAlign: 'center'}}>
-                            A porta <b>{portaOld}</b> do servidor <b>{ipOld}</b> está:<br/>
-                            <b style={{color: '#35a837'}}>Aberta</b>
+                            The port <b>{portaOld}</b> of the server <b>{ipOld}</b> is:<br/>
+                            <b style={{color: '#35a837'}}>Opened</b>
                         </Title>
                     )
                 }
@@ -118,8 +119,7 @@ function TestPort() {
 
             <ListPort>
                 <Title style={{fontSize: 16, textAlign: 'center', cursor: 'default', fontWeight: 400}}>
-                    Lista das principais portas de seu servidor ou roteador para verificar se estão abertas ou
-                    fechadas:
+                    List of the main ports on your server or router to check if they are open or closed:
                 </Title>
 
                 <RepeaterPort>

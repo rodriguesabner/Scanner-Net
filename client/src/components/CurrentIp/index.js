@@ -21,7 +21,7 @@ function IPAtual() {
     return (
         <div style={{background: '#5B568A', width: '100%'}}>
             <Title style={{textAlign: 'center', color: '#fff'}}>
-                Seu IP é atual é:<br/>
+                Your IP is current:<br/>
                 {myIp}
             </Title>
         </div>
