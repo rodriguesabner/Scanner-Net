@@ -32,9 +32,9 @@ function App() {
     useEffect(() => {
         async function getIp() {
             const response = await api.get('ip')
-            setIp(response.data.ipReq)
-            setOldIp(response.data.ipReq)
-            setMyIp(response.data.ipReq)
+            setIp(response.data.ip)
+            setOldIp(response.data.ip)
+            setMyIp(response.data.ip)
         }
 
         getIp()

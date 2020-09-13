@@ -10,7 +10,7 @@ const HOST = "0.0.0.0";
 app.use(cors())
 
 app.use(function(req, res, next){
-    res.setTimeout(5000, function(){
+    res.setTimeout('10s', function(){
         res.status(200).json({
             status: "ECONNREFUSED",
             message: "Erro ao scanear IP.",
