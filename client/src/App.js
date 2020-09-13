@@ -4,12 +4,12 @@ import {
     Container,
     Description,
     FeatureItem,
-    FixedImage,
+    FixedImage, Form,
     Header,
     Image,
     Input,
     Layout,
-    LeftDiv,
+    LeftDiv, ListPort, Port,
     RepeaterPort,
     RigthDiv,
     Title
@@ -67,7 +67,7 @@ function App() {
                         Teste de Portas Abertas
                     </p>
                 </div>
-                
+
                 <div style={{margin: 'auto 20px'}}>
                     <a href="https://www.facebook.com/rodriguesabner2" target="_blank">
                         <Face/>
@@ -92,7 +92,7 @@ function App() {
                         É simples, basta digitar o IP e a Porta nos campos abaixo 🙂
                     </Description>
 
-                    <div style={{display: "flex"}}>
+                    <Form>
                         <div style={{display: 'flex', flexDirection: 'column'}}>
                             <label>
                                 IP
@@ -105,13 +105,13 @@ function App() {
                                 Porta
                             </label>
 
-                            <Input placeholder="Porta" id="port" style={{width: 100}} value={porta}
+                            <Port placeholder="Porta" id="port" value={porta}
                                    onChange={(e) => setPorta(e.target.value)}/>
                         </div>
                         <Button type="button" onClick={() => checkPort()}>
                             Testar
                         </Button>
-                    </div>
+                    </Form>
                 </LeftDiv>
 
                 <RigthDiv>
@@ -121,7 +121,7 @@ function App() {
                 </RigthDiv>
             </Container>
 
-            <div style={{display: `${loading}`}}>
+            <div style={{display: `${loading}`, margin: '0 auto'}}>
                 <Loading/>
             </div>
 
@@ -142,7 +142,7 @@ function App() {
 
             </div>
 
-            <div style={{padding: '50px 0', marginTop: -50}}>
+            <ListPort>
                 <Title style={{fontSize: 16, textAlign: 'center', cursor: 'default', fontWeight: 400}}>
                     Lista das principais portas de seu servidor ou roteador para verificar se estão abertas ou
                     fechadas:
@@ -202,7 +202,7 @@ function App() {
                     </p>
 
                 </RepeaterPort>
-            </div>
+            </ListPort>
 
             <div style={{background: '#5B568A', width: '100%'}}>
                 <Title style={{textAlign: 'center', color: '#fff'}}>

@@ -10,7 +10,11 @@ export const Container = styled.div`
   display: flex;
   max-width: 1040px;
   margin: auto;
-  padding: 100px 0;
+  
+  @media only screen and (max-width: 768px) {
+    padding: 30px 0;
+  }
+  
 `
 
 export const Header = styled.div`
@@ -27,6 +31,12 @@ export const LeftDiv = styled.div`
   flex-direction: column;
   width: 50%;
   margin: auto;
+  padding: 100px 0;
+  
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
+  }
 `
 
 export const RigthDiv = styled.div`
@@ -41,6 +51,10 @@ export const Image = styled.img`
   border-radius: 0 50px;
   margin: auto;
   display: flex;
+  
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
   
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
@@ -66,10 +80,23 @@ export const Image = styled.img`
 export const Title = styled.p`
   font-weight: 600;
   font-size: 28px;
+  
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 export const Description = styled.p`
   color: #777;
+`
+
+export const Form = styled.div`
+  display: flex;
+  
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const Input = styled.input`
@@ -94,6 +121,36 @@ export const Input = styled.input`
     -webkit-box-shadow: 2px 5px 42px -8px rgb(63,200,170, 1);
     -moz-box-shadow: 2px 5px 42px -8px rgba(63,200,170, 1);
     box-shadow: 2px 5px 42px -8px rgb(63,200,170, 1);
+  }
+`
+
+export const Port = styled.input`
+  background: #fff;
+  border: 1px solid #ddd;
+  
+  margin-right: 10px;
+  
+  width: 100px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  outline: 0;
+  transition-duration: 200ms;
+  
+  &:hover{
+    -webkit-box-shadow: 2px 5px 42px -8px rgb(63,200,170, 0.61);
+    -moz-box-shadow: 2px 5px 42px -8px rgba(63,200,170, 0.61);
+    box-shadow: 2px 5px 42px -8px rgb(63,200,170, 0.61);
+    transition-duration: 400ms;
+  }
+  
+  &:focus{
+    -webkit-box-shadow: 2px 5px 42px -8px rgb(63,200,170, 1);
+    -moz-box-shadow: 2px 5px 42px -8px rgba(63,200,170, 1);
+    box-shadow: 2px 5px 42px -8px rgb(63,200,170, 1);
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 90%;
   }
 `
 
@@ -122,6 +179,15 @@ export const Button = styled.button`
   }
 `
 
+export const ListPort = styled.div`
+  padding: 50px 0; 
+  margin-top: -50px;
+  
+  @media only screen and (max-width: 768px) {
+    display: none;  
+  }
+`
+
 export const RepeaterPort = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -145,6 +211,10 @@ export const FixedImage = styled.img`
    //width: 100%;
   position: sticky;
   top: 150px;
+  
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 
@@ -154,4 +224,9 @@ export const FeatureItem = styled.div`
   padding: 40px;
   border-radius: 30px;
   max-width: 500px;
+  
+    @media only screen and (max-width: 768px) {
+        margin-left: 0;
+        margin-top: -60px;
+    }
 `

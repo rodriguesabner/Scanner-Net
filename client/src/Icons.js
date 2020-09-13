@@ -30,7 +30,7 @@ export const Loading = styled(LoaderCircle)`
   width: 60px;
   height: 120px;
   color: #52CCA8;
-  margin:-60px 0 0 -60px;
+  margin: -60px auto 20px auto;
   -webkit-animation:spin 4s linear infinite;
   -moz-animation:spin 4s linear infinite;
   animation:spin 4s linear infinite;
