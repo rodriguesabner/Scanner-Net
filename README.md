@@ -81,15 +81,14 @@ $ yarn install
 
 Reach out to me at one of the following places!
 
-- Website at <a href="http://fvcproductions.com" target="_blank">`fvcproductions.com`</a>
-- Twitter at <a href="http://twitter.com/fvcproductions" target="_blank">`@fvcproductions`</a>
-- Insert more social links here.
+- Facebook at <a href="http://instagram.com/kingaspx" target="_blank">`@rodriguesabner_`</a>
+- Instagram at <a href="http://instagram.com/rodriguesabner_" target="_blank">`@kingaspx`</a>
+- Youtube at <a href="http://youtube.com/c/kingaspx" target="_blank">`@kingaspx`</a>
 
 ---
 
 ## Donations (Optional)
 
 <a href="https://www.patreon.com/bePatron?u=42288653" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
-
 
 ---
